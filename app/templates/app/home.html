@@ -1,9 +1,32 @@
 {% extends 'base.html' %}
 {% load static %}
 
+
+{% block head %}
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+{% endblock head %}
+    
+
+
+
+
 {% block body %}
-<body>
-    
-    
-</body>
+
+<div class="fondo-container">
+        <h1 class="title">Agencia publicitaria
+            <br>
+            para tu empresa
+        </h1>
+        <h2 class="title2">
+            Aumenta las ventas
+            <br>
+            en tu sitio web
+        </h2>
+        <a class="btn" href="#" role="button"> Planes </a>
+    <img src="{% static 'img/fondo.png' %}" class="fondo img-fluid">
+</div>
+
+
+
+
 {% endblock %}
