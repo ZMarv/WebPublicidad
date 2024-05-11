@@ -6,10 +6,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 {% endblock head %}
     
-
-
-
-
 {% block body %}
 
 <div class="fondo-container">
@@ -22,11 +18,86 @@
             <br>
             en tu sitio web
         </h2>
-        <a class="btn" href="#" role="button"> Planes </a>
+        <a class="btn" href="{% url 'productos' %}" role="button"> Planes </a>
     <img src="{% static 'img/fondo.png' %}" class="fondo img-fluid">
+</div>
+
+<div class="container text-center">
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="col">
+      <div class="card h-100">
+        <div class="card-body">
+          <h6 class="card-title">Nuestros Beneficios</h6>
+          <p class="primer card-text"> Agencia de publicidad en Chile</p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="h-100">
+        <img src="{% static 'img/ad.png' %}" class="card-img-top-1">
+        <div class="card-body">
+          <h3 class="card-title">Publicidad </h3>
+          <p class="card-text"> Incrementa las visitas a tu página web y redes sociales 24/7/365.. Además de más de 1.5 mil millones de usuarios únicos mensuales </p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class=" h-100">
+        <img src="{% static 'img/flexibilidad.png' %}" class="card-img-top-1">
+        <div class="card-body">
+          <h3 class="card-title"> Flexibilidad  </h3>
+          <p class="card-text"> Prueba múltiples formatos de anuncios en una campaña y controla el rendimiento en tiempo real.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="h-100">
+        <img src="{% static 'img/seguridad.png' %}" class="card-img-top-1">
+        <div class="card-body">
+          <h3 class="card-title"> Seguridad </h3>
+          <p class="card-text"> Controla dónde se publican tus anuncios y qué los rodea. </p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="h-100">
+        <img src="{% static 'img/statistics.png' %}" class="card-img-top-1">
+        <div class="card-body">
+          <h3 class="card-title"> Resultados </h3>
+          <p class="card-text">Se observa constantemente el desempeño de anuncios, quitamos lo que no funciona y escalamos anuncios ganadores. </p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="h-100">
+        <img src="{% static 'img/planner.png' %}" class="card-img-top-1">
+        <div class="card-body">
+          <h3 class="card-title"> Planificación </h3>
+          <p class="card-text"> Preparamos un plan de medios profesional, considerando el comercio, valor de ticket promedio y rendimientos de cada plataforma.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <div class="servicios text-center vstack gap-2 mx-auto">
+    <figure>
+        <blockquote class="blockquote">
+            <h1>Algunos de nuestros Servicios.</h1>
+        </blockquote>
+        <figcaption class="blockquote-footer">
+            Todo lo que tu negocio necesita para convertirse en una máquina
+             <cite title="Source Title"> de hacer dinero.</cite>
+
+        </figcaption>
+        
+    </figure>
+    
 </div>
 
 
 
-
+  
 {% endblock %}
+
+

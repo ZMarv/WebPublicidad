@@ -12,3 +12,9 @@ def productos(request):
 
 def compra(request):
     return render(request, 'app/compra.html')
+
+def contacto(request):
+    return render(request,'app/contacto.html')
+
+def servicios(request):
+    return render(request, 'app/servicios.html')
