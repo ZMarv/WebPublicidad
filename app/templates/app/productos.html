@@ -8,17 +8,19 @@
             <h1>Productos</h1>
         </div>
         <div class="row">
-            {% for s in suscripcion %}
+            {% for suscripcion_con_paypal in suscripciones_con_paypal %}
             <div class="col-4">
                 <div class="card text-center">
                     <div class="card-header">
-                      Suscripción {{ s.id_suscripcion }}
+                      Suscripción {{ suscripcion_con_paypal.suscripcion.id_suscripcion }}
                     </div>
                     <div class="card-body">
-                      <h3 class="card-title">{{ s.nombre_suscripcion }}</h3>
-                      <p class="card-text" style="font-size: 20px;">${{ s.precio_suscripcion }}</p>
-                      <p class="card-text">{{ s.descripcion_suscripcion }}</p>
-                      <a href="#" class="btn2 btn-primary">Comprar</a>
+                      <h3 class="card-title">{{ suscripcion_con_paypal.suscripcion.nombre_suscripcion }}</h3>
+                      <p class="card-text" style="font-size: 20px;">${{ suscripcion_con_paypal.suscripcion.precio_suscripcion }}</p>
+                      <p class="card-text">{{ suscripcion_con_paypal.suscripcion.descripcion_suscripcion }}</p>
+                    
+
+                      {{ suscripcion_con_paypal.paypal.render }}
                     </div>
                     <div class="card-footer text-body-secondary">
                       2 days ago
