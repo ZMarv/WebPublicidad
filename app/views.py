@@ -74,12 +74,12 @@ def CheckOut(request, id_suscripcion):
     return render(request, 'app/checkout.html', context)
 
 
-def PaymentSuccessful(request, suscripcion_id):
-    product = Suscripcion.objects.get(id= suscripcion_id)
+def PaymentSuccessful(request, id_suscripcion):
+    product = Suscripcion.objects.get(id= id_suscripcion)
 
     return render(request, 'payment-success.html', {'product': product})
 
-def PaymentFailed(request, suscripcion_id):
-    product = Suscripcion.objects.get(id= suscripcion_id)
+def PaymentFailed(request, id_suscripcion):
+    product = Suscripcion.objects.get(id= id_suscripcion)
 
     return render(request, 'payment-failed.html', {'product': product})
