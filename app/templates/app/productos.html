@@ -3,27 +3,81 @@
 
 {% block body %}
 <body>
+  <div class="fondo-container">
+    <h1 class="title-planes">Nuestros Planes
+    </h1>
+    <img src="{% static 'img/fondoc.jpeg' %}" class="banner-image">
+  </div>
     <div class="container mt-5">
-        <div class="row gx-5 text-center mt-5 mb-5">
-            <h1>Productos</h1>
-        </div>
+        <!-- <div class="row gx-5 text-center mt-5 mb-5">
+            <h1>Planes</h1>
+        </div> -->
+        <figure class="mb-5">
+          <blockquote class="blockquote text-center">
+            <h1>Mejores Planes</h1>
+          </blockquote>
+          <figcaption class="subtitulo blockquote-footer text-center">
+            Nuestros planes tienen todo lo que necesitas para
+            <strong> <cite title="Source Title"> hacer crecer tu dinero.</cite> </strong>
+          </figcaption>
+        </figure>
         <div class="row">
             {% for suscripcion_con_paypal in suscripciones_con_paypal %}
             <div class="col-4">
-                <div class="card text-center">
-                    <div class="card-header">
-                      Suscripción {{ suscripcion_con_paypal.suscripcion.id_suscripcion }}
+                <div class="card card-planes">
+                    <div class="card-header card-header-custom">
+                      &nbsp;
                     </div>
                     <div class="card-body">
-                      <h3 class="card-title">{{ suscripcion_con_paypal.suscripcion.nombre_suscripcion }}</h3>
-                      <p class="card-text" style="font-size: 20px;">${{ suscripcion_con_paypal.suscripcion.precio_suscripcion }}</p>
+                      <h3 class="card-title text-center">{{ suscripcion_con_paypal.suscripcion.nombre_suscripcion }}</h3>
+                      <p class="card-text text-center" style="font-size: 20px;">${{ suscripcion_con_paypal.suscripcion.precio_suscripcion }} USD</p>
                       <p class="card-text">{{ suscripcion_con_paypal.suscripcion.descripcion_suscripcion }}</p>
-                    
-
-                      {{ suscripcion_con_paypal.paypal.render }}
+                      <ul class="list-group list-group-flush mb-5">
+                          <li class="list-group-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16">
+                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+                            <path d="m10.97 4.97-.02.022-3.473 4.425-2.093-2.094a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05"/>
+                          </svg>{{ suscripcion_con_paypal.suscripcion.creacion_avisos }}</li>
+                          <li class="list-group-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16">
+                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+                            <path d="m10.97 4.97-.02.022-3.473 4.425-2.093-2.094a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05"/>
+                          </svg>Impresión de {{ suscripcion_con_paypal.suscripcion.cantidad_panfletos }} para promocionar tu empresa</li>
+                          <li class="list-group-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16">
+                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+                            <path d="m10.97 4.97-.02.022-3.473 4.425-2.093-2.094a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05"/>
+                          </svg>{{ suscripcion_con_paypal.suscripcion.promocion_google_ads }}</li>
+                          <li class="list-group-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16">
+                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+                            <path d="m10.97 4.97-.02.022-3.473 4.425-2.093-2.094a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05"/>
+                          </svg>{{ suscripcion_con_paypal.suscripcion.monitoreo_optimizacion }}</li>
+                          {% if suscripcion_con_paypal.suscripcion.creacion_pagina_web %}
+                          <li class="list-group-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16">
+                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+                            <path d="m10.97 4.97-.02.022-3.473 4.425-2.093-2.094a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05"/>
+                          </svg>{{ suscripcion_con_paypal.suscripcion.creacion_pagina_web }}</li>
+                          {% endif %}
+                          {% if suscripcion_con_paypal.suscripcion.asistencia_personalizada %}
+                          <li class="list-group-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16">
+                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+                            <path d="m10.97 4.97-.02.022-3.473 4.425-2.093-2.094a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05"/>
+                          </svg>{{ suscripcion_con_paypal.suscripcion.asistencia_personalizada }}</li>
+                          {% endif %}
+                          {% if suscripcion_con_paypal.suscripcion.diseño_banners %}
+                          <li class="list-group-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16">
+                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+                            <path d="m10.97 4.97-.02.022-3.473 4.425-2.093-2.094a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05"/>
+                          </svg>{{ suscripcion_con_paypal.suscripcion.diseño_banners }}</li>
+                          {% endif %}
+                          {% if suscripcion_con_paypal.suscripcion.administracion_campañas %}
+                          <li class="list-group-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16">
+                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+                            <path d="m10.97 4.97-.02.022-3.473 4.425-2.093-2.094a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05"/>
+                          </svg>{{ suscripcion_con_paypal.suscripcion.administracion_campañas }}</li>
+                          {% endif %}
+                      </ul>
+                      <div class="text-center">{{ suscripcion_con_paypal.paypal.render }}</div>
                     </div>
                     <div class="card-footer text-body-secondary">
-                      2 days ago
+                      
                     </div>
                   </div>
             </div>

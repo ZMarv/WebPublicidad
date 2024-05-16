@@ -200,17 +200,17 @@ p {
 }
 
 .btn-contacto {
-    background-color: #34aac5; /* Cambia el color de fondo */
-    color: #fff; /* Cambia el color del texto */
-    border: none; /* Quita el borde */
-    padding: 10px 20px; /* Cambia el padding */
-    font-size: 16px; /* Cambia el tamaño del texto */
-    text-decoration: none; /* Quita el subrayado */
+    background-color: #34aac5; 
+    color: #fff; 
+    border: none;
+    padding: 10px 20px; 
+    font-size: 16px; 
+    text-decoration: none;
     border-radius: 10px;
 }
 
 .btn-contacto:hover {
-    background-color: #34aac5; /* Cambia el color de fondo al pasar el cursor */
+    background-color: #34aac5; 
 }
 
 
@@ -218,3 +218,42 @@ p {
     border-radius: 20px;
     border: 3px solid #ccc;
 }
+
+
+.card-header-custom {
+    background-color: #34aac5;
+    color: white;
+    border-radius: 20px; /* Aplica un borde redondeado a todos los lados */
+    border-bottom: none; /* Elimina el borde inferior para evitar duplicaciones */
+}
+
+.card-footer {
+    background-color: #34aac5;
+    color: white;
+    border-radius: 20px; /* Aplica un borde redondeado a todos los lados */
+    border-top: none; /* Elimina el borde superior para evitar duplicaciones */
+}
+
+
+
+.banner-image {
+    width: 100%; /* Establece el ancho al 100% del contenedor */
+    max-height: 80%; /* Establece una altura máxima para el banner */
+    object-fit: cover; /* Ajusta la imagen para cubrir el contenedor */
+
+}
+
+.title-planes {
+    position: absolute;
+    left: 10%;
+    color: #ffffff;
+    z-index: 1;
+    text-align: left;
+}
+
+.title-planes {
+    top: 15%;
+    font-size: 6rem;
+    font-weight: bold;
+}
+

@@ -38,8 +38,6 @@ def productos(request):
 
     return render(request, 'app/productos.html', {"suscripciones_con_paypal": suscripciones_con_paypal})
 
-def compra(request):
-    return render(request, 'app/compra.html')
 
 def contacto(request):
     return render(request,'app/contacto.html')
@@ -77,9 +75,9 @@ def CheckOut(request, id_suscripcion):
 def PaymentSuccessful(request, id_suscripcion):
     product = Suscripcion.objects.get(id= id_suscripcion)
 
-    return render(request, 'payment-success.html', {'product': product})
+    return render(request, 'app/home.html', {'product': product})
 
 def PaymentFailed(request, id_suscripcion):
     product = Suscripcion.objects.get(id= id_suscripcion)
 
-    return render(request, 'payment-failed.html', {'product': product})
+    return render(request, 'app/home.html', {'product': product})
