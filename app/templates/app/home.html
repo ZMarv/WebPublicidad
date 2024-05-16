@@ -139,58 +139,65 @@
 
 <div class="container">
   <div id="contacto" class="text-center vstack gap-2 mx-auto mt-5">
-    <figure>
-      <blockquote class="blockquote">
-        <h1>Contacto</h1>
-      </blockquote>
-      <figcaption class="subtitulo blockquote-footer">
-        Todo lo que tu negocio necesita para convertirse en una máquina
-        <strong> <cite title="Source Title"> de hacer dinero.</cite> </strong>
-      </figcaption>
-    </figure>
-    <div class="card text-center">
+    
+    <div class="card text-center card-contacto">
+      <figure>
+        <blockquote class="blockquote mt-5">
+          <h1>Contacto</h1>
+        </blockquote>
+        <figcaption class="subtitulo blockquote-footer">
+          Todo lo que tu negocio necesita para convertirse en una máquina
+          <strong> <cite title="Source Title"> de hacer dinero.</cite> </strong>
+        </figcaption>
+      </figure>
+      
       <div class="card-body">
-        <div class="row">
-          <div class="col-6">
-            <div class="input mb-3">
-              <input type="text" class="form-control" placeholder="Nombre y Apellido" aria-label="Nombre y Apellido"
-                aria-describedby="basic-addon1">
+        <form id="contactoForm" class="needs-validation" novalidate>
+          <div class="row">
+            <div class="col-6">
+              <input type="text" class="form-control mb-4" id="nombreApellido" placeholder="Nombre y Apellido" aria-label="Nombre y Apellido" required>
+              <div class="invalid-feedback">
+                Por favor ingrese su nombre y apellido.
+              </div>
+            </div>
+            <div class="col-6">
+              <input type="tel" class="form-control mb-4" id="telefono" placeholder="Teléfono" aria-label="Telefono" required>
+              <div class="invalid-feedback">
+                Por favor ingrese un número de teléfono válido.
+              </div>
             </div>
           </div>
-          <div class="col-6">
-            <div class="input mb-3">
-              <input type="text" class="form-control" placeholder="Teléfono" aria-label="Telefono"
-                aria-describedby="basic-addon1">
+          <div class="row">
+            <div class="col-6">
+              <input type="email" class="form-control mb-4" id="correo" placeholder="Correo Electrónico" aria-label="Correo" required>
+              <div class="invalid-feedback">
+                Por favor ingrese un correo electrónico válido.
+              </div>
             </div>
-
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-6">
-            <div class="input mb-3">
-              <input type="text" class="form-control" placeholder="Correo Electrónico" aria-label="Correo"
-                aria-describedby="basic-addon1">
-            </div>
-          </div>
-          <div class="col-6">
-            <div class="input mb-3">
-              <input type="text" class="form-control" placeholder="Empresa" aria-label="Empresa"aria-describedby="basic-addon1">
+            <div class="col-6">
+              <input type="text" class="form-control mb-4" id="empresa" placeholder="Nombre de la Empresa" aria-label="Empresa" required>
+              <div class="invalid-feedback">
+                Por favor ingrese el nombre de la empresa.
+              </div>
             </div>
           </div>
-        </div>
-        <div class="row">
-          <div class="col">
-            <div class="form-floating">
-              <textarea class="form-control" placeholder="Mensaje" id="floatingTextarea2" style="height: 100px"></textarea>
-              <label for="floatingTextarea2">Mensaje</label>
+          <div class="row">
+            <div class="col">
+              <div class="form-floating">
+                <textarea class="form-control mb-3" id="mensaje" placeholder="Mensaje" style="height: 200px" required></textarea>
+                <label for="mensaje">Mensaje</label>
+              </div>
+              <div class="invalid-feedback">
+                Por favor ingrese un mensaje.
+              </div>
             </div>
           </div>
-        </div>
-        <div class="row">
-          <div class="col">
-            <button type="button" class="btn btn-primary">Primary</button>
+          <div class="row">
+            <div class="col">
+              <button type="button" id="enviarBtn" class="btn-contacto mt-5">Enviar</button>
+            </div>
           </div>
-        </div>
+        </form>
       </div>
     </div>
   </div>
@@ -219,6 +226,7 @@
   <h1 class="title-centered">¿Estás listo para atraer más clientes a tu negocio?</h1>
 </div>
 
-
-
+{% block js %}
+<script src="{% static 'js/pago.js' %}"></script>
+{% endblock %}
 {% endblock %}

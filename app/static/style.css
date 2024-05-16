@@ -199,3 +199,22 @@ p {
     }
 }
 
+.btn-contacto {
+    background-color: #34aac5; /* Cambia el color de fondo */
+    color: #fff; /* Cambia el color del texto */
+    border: none; /* Quita el borde */
+    padding: 10px 20px; /* Cambia el padding */
+    font-size: 16px; /* Cambia el tamaño del texto */
+    text-decoration: none; /* Quita el subrayado */
+    border-radius: 10px;
+}
+
+.btn-contacto:hover {
+    background-color: #34aac5; /* Cambia el color de fondo al pasar el cursor */
+}
+
+
+.card-contacto {
+    border-radius: 20px;
+    border: 3px solid #ccc;
+}
