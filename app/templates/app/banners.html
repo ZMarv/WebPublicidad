@@ -3,35 +3,21 @@
 
 {% block body %}
 <body>
-  <div class="fondo-container">
-    <h1 class="title-planes">Nuestros Planes
-    </h1>
-    <img src="{% static 'img/fondoc.jpeg' %}" class="banner-image">
-  </div>
     <div class="container mt-5">
-        <!-- <div class="row gx-5 text-center mt-5 mb-5">
-            <h1>Planes</h1>
-        </div> -->
         <figure class="mb-5">
           <blockquote class="blockquote text-center">
-            <h1>Mejores Planes</h1>
+            <h1>Empresas que colaboran con <strong> <cite title="Source Title"> nosotros</cite> </strong></h1>
           </blockquote>
-          <figcaption class="subtitulo blockquote-footer text-center">
-            Nuestros planes tienen todo lo que necesitas para
-            <strong> <cite title="Source Title"> hacer crecer tu dinero.</cite> </strong>
-          </figcaption>
         </figure>
 
         <div class="row">
             <div class="col">
                 <div class="gif-container">
                   <img src="{% static 'img/Promo 1 - Umbrella GIF.gif' %}" class="banner-image" alt="Promo 1">
-                  <a href="{% url 'umbrella' %}" style="position: absolute; top: 1535px; left: 390px; width: 240px; height: 40px;"></a>
+                  <!-- <a href="{% url 'umbrella' %}" style="position: absolute; top: 1535px; left: 390px; width: 240px; height: 40px;"></a> -->
                 </div>
               </div> 
         </div>
-                  
-         
     </div>
 </body>
 {% endblock %}
