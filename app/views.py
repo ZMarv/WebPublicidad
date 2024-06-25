@@ -4,6 +4,7 @@ from paypal.standard.forms import PayPalPaymentsForm
 from django.conf import settings
 import uuid
 from django.urls import reverse
+from django.shortcuts import redirect
 # Create your views here.
 
 def home(request):
@@ -81,3 +82,9 @@ def PaymentFailed(request, id_suscripcion):
     product = Suscripcion.objects.get(id= id_suscripcion)
 
     return render(request, 'app/home.html', {'product': product})
+
+def banners(request):
+    return render(request, 'app/banners.html')
+
+def umbrella(request):
+    return redirect('https://umbrellaclub.net')
