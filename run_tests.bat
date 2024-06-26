@@ -1,10 +1,10 @@
 @echo off
 
 rem Inicia el servidor de desarrollo en segundo plano
-start /B python C:\Users\anton\OneDrive\Escritorio\WebPublicidad\manage.py runserver
+start /B python C:\Users\anton\OneDrive\Documentos\GitHub\WebPublicidad\manage.py runserver
 
 rem Espera unos segundos para que el servidor inicie completamente
-timeout /t 10 > nul
+timeout /t 5 > nul
 
 rem Ejecuta las pruebas
 python C:\Users\anton\OneDrive\Escritorio\WebPublicidad\manage.py test
