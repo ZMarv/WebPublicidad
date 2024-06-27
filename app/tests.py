@@ -31,6 +31,8 @@ try:
     correo = driver.find_element(By.ID, "correo")
     correo.send_keys("johndoe03@gmail.com")
 
+
+
     empresa = driver.find_element(By.ID, "empresa")
     empresa.send_keys("Flex Pe")
 
@@ -61,8 +63,6 @@ try:
         WebDriverWait(driver, 10).until(EC.url_changes(driver.current_url))
     except TimeoutException:
         print("Timeout waiting for URL change after clicking enviarBtn")
-
-    # Puedes añadir aquí más validaciones o acciones después de enviar el formulario si es necesario
 
 finally:
     # Cierra el navegador al finalizar
