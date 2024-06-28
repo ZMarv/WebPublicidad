@@ -5,18 +5,36 @@
 <body>
     <div class="container mt-5">
         <figure class="mb-5">
-          <blockquote class="blockquote text-center">
-            <h1>Empresas que colaboran con <strong> <cite title="Source Title"> nosotros</cite> </strong></h1>
-          </blockquote>
+            <blockquote class="blockquote text-center">
+                <h1>Empresas que colaboran con <strong><cite title="Source Title">nosotros</cite></strong></h1>
+            </blockquote>
         </figure>
 
         <div class="row">
             <div class="col">
                 <div class="gif-container">
-                  <img src="{% static 'img/Promo 1 - Umbrella GIF.gif' %}" class="banner-image" alt="Promo 1">
-                  <!-- <a href="{% url 'umbrella' %}" style="position: absolute; top: 1535px; left: 390px; width: 240px; height: 40px;"></a> -->
+                    <img src="{% static 'img/Promo 1 - Umbrella GIF.gif' %}" class="banner-image" alt="Promo 1">
                 </div>
-              </div> 
+            </div>
+        </div>
+
+        <div class="row gx-5 mt-5">
+            <div class="col text-center">
+                <div class="p-3">
+                    <h1> <strong>Agradecimiento </strong></h1>
+                    <p class="agradecimiento-texto"> 
+                        Nos gustaría expresar nuestro más sincero agradecimiento a Pylearning por su valiosa contribución. 
+                        Gracias a su sitio web, que ofrece documentación y cursos gratuitos sobre Python, hemos podido 
+                        mantener a nuestro personal altamente capacitado. ¡Gracias, Pylearning, por apoyar nuestro 
+                        crecimiento y desarrollo!
+                    </p>
+                </div>
+            </div>
+            <div class="col text-center">
+                <div class="p-3">
+                    <img src="{% static 'img/Pylearning.jpg' %}" class="card-img-top img-pylearning">
+                </div>
+            </div>
         </div>
     </div>
 </body>

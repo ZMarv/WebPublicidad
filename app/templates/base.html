@@ -11,10 +11,46 @@
             position: fixed;
             top: 0;
             width: 100%;
-            z-index: 1000; /* Asegura que el navbar esté por encima de otros elementos */
+            z-index: 1000;
         }
         body {
-            padding-top: 56px; /* Asegura que el contenido no esté detrás del navbar fijo */
+            padding-top: 56px;
+            font-family: Arial, sans-serif;
+        }
+        footer {
+            background-color: #f8f8f8;
+            padding: 20px;
+            text-align: left;
+            border-top: 1px solid #e7e7e7;
+        }
+        footer .container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        footer .column {
+            flex: 1;
+            margin: 10px;
+        }
+        footer .column.large {
+            flex: 2;
+        }
+        footer .column h3 {
+            margin-top: 0;
+        }
+        footer .column ul {
+            list-style: none;
+            padding: 0;
+        }
+        footer .column ul li {
+            margin-bottom: 10px;
+        }
+        footer .column ul li a {
+            text-decoration: none;
+            color: #333;
+        }
+        footer .column ul li a:hover {
+            text-decoration: underline;
         }
     </style>
     <title>Mercado Adds</title>
@@ -51,10 +87,41 @@
 
 {% block body %}
 {% endblock %}
+<footer>
+    <div class="container p-3">
+        <div class="column">
+            <h3>Enlaces</h3>
+            <ul>
+                <li><a href="{% url 'home' %}">Inicio</a></li>
+                <li><a href="{% url 'productos' %}">Servicios</a></li>
+                <li><a href="{% url 'banners' %}">Empresas</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </div>
+        <div class="column">
+            <h3>Contactanos</h3>
+            <ul>
+                <li><a href="tel:+56912012012">+56 9 12012012</a></li>
+                <li><a href="tel:+56912012012">+56 9 12012012</a></li>
+                <li><a href="mailto:anto.rojas@duocuc.cl">anto.rojas@duocuc.cl</a></li>
+                <li>Av. Vicuña Mackenna 17, San Joaquín</li>
+            </ul>
+        </div>
+        <div class="column">
+            <h3>Síguenos</h3>
+            <ul>
+                <li><a href="#">Facebook</a></li>
+                <li><a href="https://www.instagram.com/astralkunstt?igshid=MXM2M3hlbmh1M21yaw==">Instagram</a></li>
+                <li><a href="#">LinkedIn</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
 
 <footer id="footer" class="text-light text-center text-bg-dark p-3 py-4 mt-5">
     <p>
-        &copy; 2024 Publicidad - <small> Amadeus Solutions </small> <br /> Todos los derechos reservados
+        &copy; 2024 Publicidad - <small> Amadeus Solutions </small> Todos los derechos reservados
     </p>
     
 </footer>
