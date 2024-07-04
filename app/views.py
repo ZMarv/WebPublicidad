@@ -5,10 +5,13 @@ from django.conf import settings
 import uuid
 from django.urls import reverse
 from django.shortcuts import redirect
-# Create your views here.
+import requests
 
 def home(request):
-    return render(request, 'app/home.html')
+    url = "http://worldtimeapi.org/api/timezone/America/Santiago"
+    response = requests.get(url)
+    data = response.json()
+    return render(request, 'app/home.html',{'data': data})
 
 def productos(request):
     suscripciones = Suscripcion.objects.all()
